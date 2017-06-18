@@ -22,7 +22,7 @@
             <button id="hangupButton">Hang Up</button>
         </div>
 
-        <script src="js/adapter.js"></script>
+  
         <script src="js/main.js"></script>
 
     </body>
