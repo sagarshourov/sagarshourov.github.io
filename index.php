@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+    <head>
 
-  <title>Realtime communication with WebRTC</title>
+        <title>Realtime communication with WebRTC</title>
 
-  <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/main.css" />
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-  <h1>Realtime communication with WebRTC</h1>
+        <h1>Realtime communication with WebRTC</h1>
 
-  <video autoplay></video>
+        <video id="localVideo" autoplay></video>
+        <video id="remoteVideo" autoplay></video>
 
-  <script src="js/main.js"></script>
+        <div>
+            <button id="startButton">Start</button>
+            <button id="callButton">Call</button>
+            <button id="hangupButton">Hang Up</button>
+        </div>
 
-</body>
+        <script src="js/adapter.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
 
 </html>
