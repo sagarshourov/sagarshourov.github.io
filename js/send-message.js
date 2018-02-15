@@ -35,10 +35,10 @@ window.onload = () => {
 	
 	
 	const btn = `<div class="btn-block" id="chatbtn" style="z-index:1000; position:fixed; bottom:10px">
-        <a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a><button id="editvimchatBtn">Open Modal</button>
+        <a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a><button onclick="ShowModel()">Open Modal</button>
     </div>`;
 	
-	this.parentElement.innerHTML += btn;
+	document.body.innerHTML += btn;
 	
 	
 	
@@ -54,7 +54,11 @@ window.onload = () => {
 	var span = document.getElementsByClassName("close")[0];
 
 
-	btn.onclick = function() {
+	/*btn.onclick = function() {
+		
+	}*/
+	
+	function ShowModel(){
 		modal.style.display = "block";
 	}
 
