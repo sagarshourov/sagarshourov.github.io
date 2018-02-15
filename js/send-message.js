@@ -4,7 +4,7 @@ window.onload = () => {
 	document.querySelector('head').innerHTML += '<link rel="stylesheet" href="https://sagarshourov.github.io/css/vimchatadmin.css" type="text/css"/>';
 	
 	
-	document.body.innerHTML += btn;
+	
 	
 	
 	const model = `
@@ -38,6 +38,7 @@ window.onload = () => {
         <a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a><button id="editvimchatBtn">Open Modal</button>
     </div>`;
 	
+	document.body.innerHTML += btn;
 	
 	
 	
