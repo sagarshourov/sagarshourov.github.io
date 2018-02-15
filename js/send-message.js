@@ -38,7 +38,7 @@ window.onload = () => {
         <a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a><button id="editvimchatBtn">Open Modal</button>
     </div>`;
 	
-	document.body.innerHTML += btn;
+	this.parentElement.innerHTML += btn;
 	
 	
 	
