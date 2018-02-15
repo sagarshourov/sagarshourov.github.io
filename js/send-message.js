@@ -1,15 +1,112 @@
 /* eslint-disable */
 window.onload = () => {
 	document.querySelector('head').innerHTML += '<link rel="stylesheet" href="https://vimchat-development.firebaseapp.com/css/vimchat-button.css" type="text/css"/>';
+	document.querySelector('head').innerHTML += '<link rel="stylesheet" href="https://sagarshourov.github.io/css/vimchatadmin.css" type="text/css"/>';
 	
-	const btn = ` <div class="btn-block" style="z-index:1000; position:fixed; bottom:10px">
-        <a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a>
-    </div>`;
 	
 	document.body.innerHTML += btn;
 	
 	
+	const model = `
+					<div id="myModal" class="modal">
+
+					  <!-- Modal content -->
+					  <div class="modal-content">
+						<span class="close">&times;</span>
+						Top : <input id="top" type="text" name="top" />
+						<br/>
+						<br/>
+						Bottom : <input id="bottom" type="text" name="bottom" />
+							<br/>
+						<br/>
+						Left : <input id="left" type="text" name="left" />
+							<br/>
+						<br/>
+						Right : <input id="right" type="text" name="right" />
+							<br/>
+						<br/>
+						<input id="save" type="submit" value="Save" />
+					  </div>
+
+					</div>`;
+					document.body.innerHTML += model;
+	//const editvimchatBtn =  '';
 	
+	
+	
+	const btn = `<div class="btn-block" id="chatbtn" style="z-index:1000; position:fixed; bottom:10px">
+        <a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a><button id="editvimchatBtn">Open Modal</button>
+    </div>`;
+	
+	
+	
+	
+	
+/*chat admin */
+
+	var modal = document.getElementById('myModal');
+
+
+	var btn = document.getElementById("editvimchatBtn");
+	var save = document.getElementById("save");
+
+	var span = document.getElementsByClassName("close")[0];
+
+
+	btn.onclick = function() {
+		modal.style.display = "block";
+	}
+
+	span.onclick = function() {
+		modal.style.display = "none";
+	}
+
+	save.onclick = function() {
+		
+		var stop = document.getElementById("top").value;
+		var sbottom = document.getElementById("bottom").value;
+		var sleft = document.getElementById("left").value;
+		var sright = document.getElementById("right").value;
+		var chatbtn = document.getElementById("chatbtn");
+		
+		chatbtn.style.removeProperty('left');
+		chatbtn.style.removeProperty('top');
+		chatbtn.style.removeProperty('right');
+		chatbtn.style.removeProperty('bottom');
+		if(stop){
+			chatbtn.style.setProperty('top',stop+'px');
+		}else{
+			chatbtn.style.removeProperty('top');
+		}
+		
+		if(sbottom){
+			chatbtn.style.setProperty('bottom',sbottom+'px');
+		}else{
+			chatbtn.style.removeProperty('bottom');
+		}
+		
+		if(sleft){
+			chatbtn.style.setProperty('left',sleft+'px');
+		}else{
+			chatbtn.style.removeProperty('left');
+		}
+		if(sright){
+			chatbtn.style.setProperty('right',sright+'px');
+		}else{
+			chatbtn.style.removeProperty('right');
+		}
+
+		modal.style.display = "none";
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+
+/*chat admin */
 	
   const ua = navigator.userAgent.toLowerCase();
   const bots = (/(yandex|google|stackrambler|aport|slurp|msnbot|bingbot|twitterbot|ia_archiver|facebookexternalhit)/i);
