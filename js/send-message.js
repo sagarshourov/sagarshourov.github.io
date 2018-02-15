@@ -30,12 +30,12 @@ window.onload = () => {
 
 					</div>`;
 					document.body.innerHTML += model;
-	const editvimchatBtn =  '<button id="editvimchatBtn">Edit Position</button>';
+	const editposition =  '<button id="editvimchatBtn">Edit Position</button>';
 	
 	
 	
 	const btn = `<div class="btn-block" id="chatbtn" style="z-index:1000; position:fixed; bottom:10px">
-        <a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a>`+editvimchatBtn+`
+        <a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a>`+editposition+`
     </div>`;
 	
 	document.body.innerHTML += btn;
