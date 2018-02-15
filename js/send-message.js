@@ -103,11 +103,7 @@ window.onload = () => {
 		}else{
 			chatbtn.style.removeProperty('right');
 		}
-		const tembtn = `<div class="btn-block" id="chatbtn" style="z-index:1000; position:fixed; bottom:100px">
-        <a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a>`+editposition+`
-    </div>`;
 	
-	btncontainer.innerHTML += tembtn;
 
 		modal.style.display = "none";
 	}
