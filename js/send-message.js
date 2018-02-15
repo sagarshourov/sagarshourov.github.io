@@ -48,7 +48,7 @@ window.onload = () => {
 	var modal = document.getElementById('myModal');
 
 
-	var btn = document.getElementById("editvimchatBtn");
+	//var btn = document.getElementById("editvimchatBtn");
 	var save = document.getElementById("save");
 
 	var span = document.getElementsByClassName("close")[0];
