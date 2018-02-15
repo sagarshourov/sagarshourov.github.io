@@ -38,7 +38,7 @@ window.onload = () => {
         <a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a><button onclick="ShowModel()">Open Modal</button>
     </div>`;
 	
-	document.body.innerHTML += btn;
+	
 	
 	
 	
@@ -110,6 +110,7 @@ window.onload = () => {
 			modal.style.display = "none";
 		}
 	}
+	document.body.innerHTML += btn;
 
 /*chat admin */
 	
