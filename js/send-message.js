@@ -35,10 +35,10 @@ window.onload = () => {
 	
 	
 	const btn = `<div class="btn-block" id="chatbtn" style="z-index:1000; position:fixed; bottom:10px">
-        <a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a><button onclick="ShowModel()">Open Modal</button>
+        <a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a><button id="editvimchatBtn">Open Modal</button>
     </div>`;
 	
-	
+	document.body.innerHTML += btn;
 	
 	
 	
@@ -48,19 +48,18 @@ window.onload = () => {
 	var modal = document.getElementById('myModal');
 
 
-	//var btn = document.getElementById("editvimchatBtn");
+	var btn = document.querySelector("#editvimchatBtn");
+	
+
 	var save = document.getElementById("save");
 
 	var span = document.getElementsByClassName("close")[0];
 
 
-	/*btn.onclick = function() {
-		
-	}*/
-	
-	function ShowModel(){
+	btn.onclick = function() {
 		modal.style.display = "block";
 	}
+
 
 	span.onclick = function() {
 		modal.style.display = "none";
@@ -110,7 +109,6 @@ window.onload = () => {
 			modal.style.display = "none";
 		}
 	}
-	document.body.innerHTML += btn;
 
 /*chat admin */
 	
