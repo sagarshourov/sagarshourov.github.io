@@ -19,75 +19,8 @@ $(function(){
 	
 /*chat admin */
 
-	var modal = document.getElementById('myModal');
 
 
-	var editvimchatBtn = document.querySelector("#editvimchatBtn");
-	
-	
-	
-	var btncontainer = document.querySelector("#btncontainer");
-	
-
-	var save = document.getElementById("save");
-
-	var span = document.getElementsByClassName("close")[0];
-
-
-	editvimchatBtn.onclick = function() {
-		modal.style.display = "block";
-	}
-
-
-	span.onclick = function() {
-		modal.style.display = "none";
-	}
-
-	save.onclick = function() {
-		
-		var stop = document.getElementById("top").value;
-		var sbottom = document.getElementById("bottom").value;
-		var sleft = document.getElementById("left").value;
-		var sright = document.getElementById("right").value;
-		var chatbtn = document.getElementById("chatbtn");
-		
-		chatbtn.style.removeProperty('left');
-		chatbtn.style.removeProperty('top');
-		chatbtn.style.removeProperty('right');
-		chatbtn.style.removeProperty('bottom');
-		if(stop){
-			chatbtn.style.setProperty('top',stop+'px');
-		}else{
-			chatbtn.style.removeProperty('top');
-		}
-		
-		if(sbottom){
-			chatbtn.style.setProperty('bottom',sbottom+'px');
-		}else{
-			chatbtn.style.removeProperty('bottom');
-		}
-		
-		if(sleft){
-			chatbtn.style.setProperty('left',sleft+'px');
-		}else{
-			chatbtn.style.removeProperty('left');
-		}
-		if(sright){
-			chatbtn.style.setProperty('right',sright+'px');
-		}else{
-			chatbtn.style.removeProperty('right');
-		}
-	
-
-		modal.style.display = "none";
-	}
-
-	// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-		}
-	}
 
 /*chat admin */
 	
