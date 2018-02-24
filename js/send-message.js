@@ -1,5 +1,5 @@
 /* eslint-disable */
-window.onload = () => {
+$(function(){
 	document.querySelector('head').innerHTML += '<link rel="stylesheet" href="https://vimchat-development.firebaseapp.com/css/vimchat-button.css" type="text/css"/>';
 	
 	
@@ -10,7 +10,7 @@ window.onload = () => {
         <a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a>
     </div><div>`;
 	
-	document.body.innerHTML = '';
+	document.body.innerHTML += btn;
 	
 	
 	
