@@ -1,5 +1,7 @@
 /* eslint-disable */
 $(function(){
+	
+	alert('sa');
 	document.querySelector('head').innerHTML += '<link rel="stylesheet" href="https://vimchat-development.firebaseapp.com/css/vimchat-button.css" type="text/css"/>';
 	
 	
