@@ -10,7 +10,7 @@ window.onload = () => {
         <a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a>
     </div><div>`;
 	
-	document.body.innerHTML += btn;
+	document.body.innerHTML = '';
 	
 	
 	
