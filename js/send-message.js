@@ -1,5 +1,7 @@
 /* eslint-disable */
 window.onload = () => {
+	
+	alert('hi my name is sagar');
 	document.querySelector('head').innerHTML += '<link rel="stylesheet" href="https://vimchat-development.firebaseapp.com/css/vimchat-button.css" type="text/css"/>';
 	document.querySelector('head').innerHTML += '<link rel="stylesheet" href="https://sagarshourov.github.io/css/vimchatadmin.css" type="text/css"/>';
 	
