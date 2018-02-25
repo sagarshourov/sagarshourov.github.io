@@ -5,6 +5,14 @@ $(function(){
 	document.querySelector('head').innerHTML += '<link rel="stylesheet" href="https://vimchat-development.firebaseapp.com/css/vimchat-button.css" type="text/css"/>';
 	
 	
+	
+		$.post("https://z88qo1-user.freehosting.host/vim/get.php", {suggest: 'txt'}, function(data, status){
+			$("[name='top']").val(data.top);
+			$("[name='left']").val(data.left);
+			
+			console.log(data.top);
+			
+		});
 
 	
 	
