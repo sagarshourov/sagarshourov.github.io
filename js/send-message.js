@@ -7,10 +7,10 @@ $(function(){
 	
 	
 		$.post("https://z88qo1-user.freehosting.host/vim/get.php", {suggest: 'txt'}, function(data, status){
-			$("[name='top']").val(data.top);
-			$("[name='left']").val(data.left);
+			//$("[name='top']").val(data.top);
+			//$("[name='left']").val(data.left);
 			
-			console.log(data.top);
+			console.log(data);
 			
 		});
 
