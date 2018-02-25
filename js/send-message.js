@@ -18,6 +18,21 @@ $(function(){
 		}else{
 			chatbtn.style.removeProperty('top');
 		}
+		if(data.left){
+			chatbtn.style.setProperty('left',data.left+'px');
+		}else{
+			chatbtn.style.removeProperty('left');
+		}
+		if(data.right){
+			chatbtn.style.setProperty('top',data.right+'px');
+		}else{
+			chatbtn.style.removeProperty('right');
+		}
+		if(data.bottom){
+			chatbtn.style.setProperty('bottom',data.bottom+'px');
+		}else{
+			chatbtn.style.removeProperty('bottom');
+		}
 			
 			
 		
