@@ -6,11 +6,11 @@ $(function(){
 	
 	
 	
-		$.post("https://z88qo1-user.freehosting.host/vim/getfront.php", {suggest: 'txt'}, function(data, status){
+		$.getJSON("https://z88qo1-user.freehosting.host/vim/getfront.php", function(data, status){
 			//$("[name='top']").val(data.top);
 			//$("[name='left']").val(data.left);
 			
-			console.log(data);
+			console.log(data.top);
 			
 		});
 
