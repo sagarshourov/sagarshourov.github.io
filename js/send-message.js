@@ -24,7 +24,7 @@ $(function(){
 			chatbtn.style.removeProperty('left');
 		}
 		if(data.right){
-			chatbtn.style.setProperty('top',data.right+'px');
+			chatbtn.style.setProperty('right',data.right+'px');
 		}else{
 			chatbtn.style.removeProperty('right');
 		}
