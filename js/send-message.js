@@ -35,7 +35,7 @@ $(function(){
 		}
 			
 			
-		$("#chatbtn").show(1000);
+		$("#chatbtn").show();
 
 			
 			
