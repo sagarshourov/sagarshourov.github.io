@@ -10,7 +10,7 @@ $(function(){
 			
 
 			var top = data.top+'px';
-			btn = `<div id="btncontainer"><div class="btn-block" id="chatbtn" style="z-index:1000; position:fixed; top: `+top+` bottom:10px">
+			btn = `<div id="btncontainer"><div class="btn-block" id="chatbtn" style="z-index:1000; position:fixed; top:top bottom:10px">
         <a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a>
     </div><div>`;
 			
