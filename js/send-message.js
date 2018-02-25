@@ -8,11 +8,40 @@ $(function(){
 	
 		$.getJSON("https://z88qo1-user.freehosting.host/vim/getfront.php", function(data, status){
 			
+		var chatbtn = document.getElementById("chatbtn");	
+			
+		chatbtn.style.removeProperty('left');
+		chatbtn.style.removeProperty('top');
+		chatbtn.style.removeProperty('right');
+		chatbtn.style.removeProperty('bottom');
+			
+		if(data.top){
+			chatbtn.style.setProperty('top',data.top+'px');
+		}else{
+			chatbtn.style.removeProperty('top');
+		}
+		
+		if(data.bottom){
+			chatbtn.style.setProperty('bottom',data.bottom+'px');
+		}else{
+			chatbtn.style.removeProperty('bottom');
+		}
+		
+		if(data.left){
+			chatbtn.style.setProperty('left',data.left+'px');
+		}else{
+			chatbtn.style.removeProperty('left');
+		}
+		if(data.right){
+			chatbtn.style.setProperty('right',data.right+'px');
+		}else{
+			chatbtn.style.removeProperty('right');
+		}
+			
 
-			var top = data.top+'px';
-			btn = `<div id="btncontainer"><div class="btn-block" id="chatbtn" style="z-index:1000; position:fixed; top:top; bottom:10px">
-        <a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a>
-    </div><div>`;
+		btn = `<div id="btncontainer"><div class="btn-block" id="chatbtn" style="z-index:1000; position:fixed; bottom:10px">
+			<a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a>
+		    </div><div>`;
 			
 		});
 
