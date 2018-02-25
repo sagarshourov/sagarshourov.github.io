@@ -4,7 +4,7 @@ $(function(){
 
 	document.querySelector('head').innerHTML += '<link rel="stylesheet" href="https://vimchat-development.firebaseapp.com/css/vimchat-button.css" type="text/css"/>';
 	
-	btn = '<div id="btncontainer"><div class="btn-block" id="chatbtn" style="z-index:1000; position:fixed; bottom:10px">'+
+	btn = '<div id="btncontainer"><div class="btn-block" id="chatbtn" style="z-index:1000; position:fixed; bottom:10px; display:none">'+
 			'<a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a>'+
 		    		'</div><div>';
 
@@ -35,7 +35,7 @@ $(function(){
 		}
 			
 			
-		
+		$("#chatbtn").show(1000);
 
 			
 			
