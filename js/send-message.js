@@ -11,8 +11,8 @@ $(function(){
 	
 	document.body.innerHTML += btn;
 	$.getJSON("https://z88qo1-user.freehosting.host/vim/getfront.php", function(data, status){
-			
-			
+		var chatbtn = document.getElementById("chatbtn");	
+			chatbtn.style.setProperty('top',data.top+'px');
 			
 		
 
