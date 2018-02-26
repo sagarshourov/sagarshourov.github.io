@@ -45,12 +45,12 @@ $(function(){
 		}
 		
 		if(data.fontsize){
-			chatbtn.style.setProperty('padding',data.fontsize);
+			chatbtn.style.setProperty('font-size',data.fontsize);
 		}
 		
 		
 		if(data.padding){
-			chatbtn.style.setProperty('bottom',data.padding);
+			chatbtn.style.setProperty('padding',data.padding);
 		}
 		
 		
