@@ -13,7 +13,7 @@ $(function(){
 	$.getJSON("https://z88qo1-user.freehosting.host/vim/getfront.php", function(data, status){
 		var chatbtn = document.getElementById("chatbtn");
 		
-		va chatbtnchild = document.getElementById("vimbtnchild");
+		var chatbtnchild = document.getElementById("vimbtnchild");
 		
 		if(data.top){
 			chatbtn.style.setProperty('top',data.top+'px');
