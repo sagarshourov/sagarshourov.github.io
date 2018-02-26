@@ -5,7 +5,7 @@ $(function(){
 	document.querySelector('head').innerHTML += '<link rel="stylesheet" href="https://vimchat-development.firebaseapp.com/css/vimchat-button.css" type="text/css"/>';
 	
 	btn = '<div id="btncontainer"><div class="btn-block" id="chatbtn" style="z-index:1000; position:fixed; bottom:10px; display:none">'+
-			'<a hrer="#" class="btn-send show-modal" data-handle="ggg" data-production="true">Instant message</a>'+
+			'<a hrer="#" class="btn-send show-modal" id="vimbtnchild" data-handle="ggg" data-production="true">Instant message</a>'+
 		    		'</div><div>';
 
 	
@@ -13,7 +13,7 @@ $(function(){
 	$.getJSON("https://z88qo1-user.freehosting.host/vim/getfront.php", function(data, status){
 		var chatbtn = document.getElementById("chatbtn");
 		
-		va chatbtnchild = document.getElementById("chatbtn").children;
+		va chatbtnchild = document.getElementById("vimbtnchild");
 		
 		if(data.top){
 			chatbtn.style.setProperty('top',data.top+'px');
