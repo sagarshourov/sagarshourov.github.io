@@ -13,6 +13,8 @@ $(function(){
 	$.getJSON("https://z88qo1-user.freehosting.host/vim/getfront.php", function(data, status){
 		var chatbtn = document.getElementById("chatbtn");
 		
+		va chatbtnchild = document.getElementById("chatbtn").children;
+		
 		if(data.top){
 			chatbtn.style.setProperty('top',data.top+'px');
 		}else{
@@ -36,21 +38,21 @@ $(function(){
 		
 		
 		if(data.fontcolor){
-			chatbtn.style.setProperty('color',data.fontcolor);
+			chatbtnchild.style.setProperty('color',data.fontcolor);
 		}
 		
 		
 		if(data.background){
-			chatbtn.style.setProperty('background',data.background);
+			chatbtnchild.style.setProperty('background',data.background);
 		}
 		
 		if(data.fontsize){
-			chatbtn.style.setProperty('font-size',data.fontsize);
+			chatbtnchild.style.setProperty('font-size',data.fontsize);
 		}
 		
 		
 		if(data.padding){
-			chatbtn.style.setProperty('padding',data.padding);
+			chatbtnchild.style.setProperty('padding',data.padding);
 		}
 		
 		
