@@ -33,6 +33,29 @@ $(function(){
 		}else{
 			chatbtn.style.removeProperty('bottom');
 		}
+		
+		
+		if(data.fontcolor){
+			chatbtn.style.setProperty('color',data.fontcolor);
+		}
+		
+		
+		if(data.background){
+			chatbtn.style.setProperty('background',data.background);
+		}
+		
+		if(data.fontsize){
+			chatbtn.style.setProperty('padding',data.fontsize);
+		}
+		
+		
+		if(data.padding){
+			chatbtn.style.setProperty('bottom',data.padding);
+		}
+		
+		
+		
+		
 			
 			
 		$("#chatbtn").show();
