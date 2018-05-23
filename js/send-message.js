@@ -10,7 +10,7 @@ $(function(){
 
 	
 	document.body.innerHTML += btn;
-	$.getJSON("https://z88qo1-user.freehosting.host/vim/getfront.php", function(data, status){
+	$.getJSON("https://sagarroy.com/vim/getfront.php", function(data, status){
 		var chatbtn = document.getElementById("chatbtn");
 		
 		var chatbtnchild = document.getElementById("vimbtnchild");
@@ -55,7 +55,9 @@ $(function(){
 			chatbtnchild.style.setProperty('padding',data.padding);
 		}
 		
-		
+		if(data.chatbtnchild){
+			chatbtnchild.setAttribute("data-handle", data.chatbtnchild);
+		}
 		
 		
 			
