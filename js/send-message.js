@@ -55,9 +55,10 @@ $(function(){
 			chatbtnchild.style.setProperty('padding',data.padding);
 		}
 		
-		if(data.chatbtnchild){
-			chatbtnchild.setAttribute("data-handle", data.chatbtnchild);
+		if(data.texthandle){
+			document.getElementById('vimbtnchild').dataset.handle = data.texthandle;	
 		}
+		
 		
 		
 			
