@@ -202,10 +202,7 @@ $(function(){
                  handle =  parametersUrl.handle || data.texthandle;
 
                 if (!handle) {
-                  alert('Please write in link handle business');
-                  return false;
-                }else{
-                    handle = "Vimchat";
+                   handle = "Vimchat";
                 }
                 isProduction = button.dataset.production; 
                 if (isProduction === 'false') {
