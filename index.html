@@ -1,44 +1,313 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sagar Shourov Roy | Full-Stack & Smart Contract Engineer</title>
+<meta name="description" content="Portfolio of Sagar Shourov Roy: full-stack engineer with 10+ years building CRMs, ERPs and Solana smart contracts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050505;--red:#e11d2e;--red2:#ff5a66;--line:#1d1d22;--txt:#f2f2f4;--mute:#9a9aa5;--cyan:#22d3ee;--violet:#a78bfa;
+--disp:"Bebas Neue",Impact,sans-serif;--body:"Outfit",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--red2);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:999px;border:1px solid #3a1519;background:linear-gradient(#14090b,#0b0b0d);box-shadow:0 0 18px rgba(225,29,46,.25),inset 0 0 12px rgba(225,29,46,.08);font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red);flex:none}
 
-  <meta charset="utf-8">
-  <meta name="description" content="Peer connection | sagarroy">
-  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
-  <meta itemprop="description" content="Client-side WebRTC code samples">
-  <meta itemprop="name" content="WebRTC code samples">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta id="theme-color" name="theme-color" content="#ffffff">
+/* nav */
+header.nav{position:fixed;inset:0 0 auto;z-index:20;padding:16px 0;background:linear-gradient(#050505 30%,transparent)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.av{width:42px;height:42px;border-radius:50%;border:2px solid var(--red);box-shadow:0 0 14px rgba(225,29,46,.5);background:#14090b;display:grid;place-items:center;font:700 15px var(--body);overflow:hidden}
+.av img{width:100%;height:100%;object-fit:cover}
+.brand b{display:block;font:700 15px/1.1 var(--body);letter-spacing:.06em}
+.brand small{font:400 9px var(--mono);color:var(--mute);letter-spacing:.2em}
+.links{display:flex;gap:8px}
+.links a{padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:#0b0b0d;font:600 11px var(--body);letter-spacing:.1em;text-transform:uppercase;color:#cfcfd6;transition:.2s}
+.links a:hover,.links a.on{border-color:var(--red);color:#fff;box-shadow:0 0 14px rgba(225,29,46,.4)}
 
-  <base target="_blank">
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 70px;overflow:hidden}
+#fx{position:absolute;inset:0;width:100%;height:100%;opacity:.8}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr 1fr;gap:20px;align-items:center}
+.hello{margin:26px 0 4px;font:600 12px var(--body);letter-spacing:.2em;text-transform:uppercase}
+.hello i{color:var(--red2);font-style:normal}
+h1{font:400 clamp(72px,11vw,150px)/.92 var(--disp);text-transform:uppercase;letter-spacing:.01em}
+h1 span{background:linear-gradient(90deg,#fff 20%,var(--red2) 75%,var(--red));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{margin-top:26px;font:700 clamp(20px,2.4vw,28px) var(--body);color:var(--red);text-transform:uppercase;letter-spacing:.02em}
+.role::after{content:"|";margin-left:2px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.script{font:500 30px var(--body);font-family:"Caveat",cursive;color:#bdbdc7;margin:4px 0 6px}
+.lead{color:var(--mute);max-width:46ch}
+.btn{margin-top:28px;font:700 13px var(--body);letter-spacing:.1em;padding:14px 26px;transition:.2s}
+.btn:hover{box-shadow:0 0 26px rgba(225,29,46,.55)}
+.portrait{position:relative;justify-self:center;width:min(100%,430px);aspect-ratio:4/5;display:grid;place-items:end center}
+.portrait::before{content:"";position:absolute;inset:-6%;background:radial-gradient(closest-side,rgba(225,29,46,.55),rgba(225,29,46,.12) 60%,transparent);filter:blur(10px)}
+.portrait img{position:relative;width:100%;height:100%;object-fit:cover;object-position:top;-webkit-mask-image:linear-gradient(#000 80%,transparent);mask-image:linear-gradient(#000 80%,transparent)}
+.ph{position:relative;font:400 160px var(--disp);color:#2a0d10;align-self:center}
 
-  <title>Peer connection</title>
+/* stats + marquee */
+.stats{border-block:1px solid var(--line);background:#080808}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:34px 10px;text-align:center;border-left:1px solid var(--line)}
+.stat:first-child{border:0}
+.stat b{display:block;font:400 56px/1 var(--disp);background:linear-gradient(#fff,var(--red2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font:400 10px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.mq{border-bottom:1px solid var(--line);padding:30px 0}
+.mq .wrap{display:flex;align-items:center;gap:20px}
+.track{overflow:hidden;flex:1;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.track div{display:flex;gap:12px;width:max-content;animation:mv 30s linear infinite}
+.track span{white-space:nowrap;padding:6px 14px;border-radius:999px;border:1px solid #33333c;font:400 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#cfcfd6}
+@keyframes mv{to{transform:translateX(-50%)}}
 
-  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+/* sections */
+section{padding:100px 0;border-bottom:1px solid var(--line);position:relative}
+.sh{text-align:center;margin-bottom:56px}
+.sh h2{font:400 clamp(44px,6vw,72px)/1 var(--disp);text-transform:uppercase;margin-top:18px;background:linear-gradient(90deg,#fff 55%,var(--red2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about p{color:var(--mute)} .about p+p{margin-top:16px}
+.card{padding:28px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(#0f0f12,#0a0a0c)}
+.card h3{font:400 28px var(--disp);letter-spacing:.03em;color:var(--red2)}
+.card p{font-size:15px}
 
-  <link rel="stylesheet" href="css/main.css" />
+/* projects */
+.proj{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.stage{position:relative;height:340px;perspective:1100px}
+.pc{position:absolute;left:50%;top:50%;width:300px;height:290px;margin:-145px 0 0 -150px;border-radius:18px;border:1px solid #3a1519;padding:22px;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .6s;box-shadow:0 20px 50px #000}
+.pc em{position:absolute;top:18px;left:18px;font:400 10px var(--mono);letter-spacing:.14em;padding:4px 10px;border-radius:999px;background:rgba(0,0,0,.55);font-style:normal}
+.pc h4{font:400 32px/1 var(--disp);text-transform:uppercase}
+.pc small{font:400 10px var(--mono);color:var(--red2);letter-spacing:.14em;text-transform:uppercase;margin-top:6px}
+.g0{background:linear-gradient(160deg,#3a0a10,#12060a 70%)}
+.g1{background:linear-gradient(160deg,#1c1240,#090712 70%)}
+.g2{background:linear-gradient(160deg,#06323a,#050c10 70%)}
+.info .pager{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:12px;font:400 11px var(--mono);letter-spacing:.14em;color:var(--mute);text-transform:uppercase}
+.nums{display:flex;gap:4px;border:1px solid #3a1519;border-radius:999px;padding:3px}
+.nums button{all:unset;cursor:pointer;padding:3px 11px;border-radius:999px;font:400 11px var(--mono)}
+.nums button[aria-current=true]{background:var(--red);color:#fff}
+.info small{display:block;margin-top:22px;font:400 11px var(--mono);letter-spacing:.14em;color:var(--red);text-transform:uppercase}
+.info h3{font:400 44px/1.05 var(--disp);text-transform:uppercase;margin:6px 0 10px}
+.info p{color:var(--mute);max-width:42ch}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.tags span{font:400 11px var(--mono);padding:4px 12px;border:1px solid #33333c;border-radius:999px;color:#cfcfd6}
+.arrows{display:flex;gap:10px;margin-top:22px}
+.arrows button{all:unset;cursor:pointer;width:42px;height:42px;border-radius:50%;border:1px solid #3a1519;display:grid;place-items:center;background:#0b0b0d}
+.arrows button:hover{box-shadow:0 0 16px rgba(225,29,46,.5)}
 
+/* skills map */
+.map{display:grid;grid-template-columns:1fr auto 1fr;gap:34px;align-items:center}
+.col{display:grid;gap:22px}
+.grp{padding:20px 22px;border-radius:16px;border:1px solid var(--c);box-shadow:0 0 22px color-mix(in srgb,var(--c) 22%,transparent)}
+.grp h3{font:700 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--c);margin-bottom:8px}
+.grp p{font:400 12.5px/1.9 var(--mono);color:#cfcfd6}
+.core{width:170px;height:170px;border-radius:50%;display:grid;place-items:center;text-align:center;background:radial-gradient(circle,#3a0a10,#0a0506 70%);border:1px solid var(--red);box-shadow:0 0 50px rgba(225,29,46,.45)}
+.core b{display:block;font:400 62px/1 var(--disp);color:#ffd36b;text-shadow:0 0 18px rgba(255,170,40,.6)}
+.core span{font:400 10px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+
+/* timeline */
+.tl{max-width:760px;margin:0 auto;border-left:1px solid #3a1519;padding-left:34px;list-style:none;padding-top:0}
+.tl li{position:relative;padding-bottom:40px}
+.tl li::before{content:"";position:absolute;left:-41px;top:8px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:2px solid var(--red);box-shadow:0 0 10px var(--red)}
+.tl small{font:400 11px var(--mono);letter-spacing:.14em;color:var(--red2);text-transform:uppercase}
+.tl h3{font:400 32px/1.1 var(--disp);text-transform:uppercase;margin:4px 0 6px}
+.tl p{color:var(--mute)}
+.award{margin-top:30px;text-align:center}
+.award .pill{font-size:11px}
+
+/* contact */
+.contact{text-align:center}
+.contact p{color:var(--mute);margin:14px auto 0;max-width:46ch}
+.row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+footer{padding:30px 0;text-align:center;font:400 11px var(--mono);letter-spacing:.12em;color:var(--mute)}
+
+@media(max-width:900px){
+  .links{display:none}
+  .hero .wrap,.about,.proj,.map{grid-template-columns:1fr}
+  .portrait{order:-1;width:min(80%,320px)}
+  .stats .wrap{grid-template-columns:1fr 1fr}.stat:nth-child(3){border-left:0}
+  .core{margin:0 auto}
+  .stage{height:320px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.track div,.role::after{animation:none}.pc{transition:none}}
+</style>
 </head>
-
 <body>
 
-  <div id="container">
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#home"><span class="av"><img src="photo.jpg" alt="" onerror="this.remove()">SR</span><span><b>SAGAR <i class="dot" style="display:inline-block"></i></b><small>FULL-STACK ENGINEER</small></span></a>
+  <nav class="links" aria-label="Primary">
+    <a href="#home" class="on">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+  </nav>
+  <a class="pill" href="#contact">Let's talk</a>
+</div></header>
 
-    <video id="localVideo" autoplay muted></video>
-    <video id="remoteVideo" autoplay></video>
-
+<main>
+<section class="hero" id="home" style="padding-bottom:70px">
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div class="wrap">
     <div>
-      <button id="startButton">Start</button>
-      <button id="callButton">Call</button>
-      <button id="hangupButton">Hang Up</button>
+      <span class="pill"><i class="dot"></i>Building production web &amp; on-chain systems</span>
+      <p class="hello"><i>&bull;</i> Hello, I am</p>
+      <h1>Sagar<br><span>Shourov Roy</span></h1>
+      <p class="role" id="role">Full-stack developer</p>
+      <p class="script">Built to last, shipped to scale.</p>
+      <p class="lead">I build CRMs, ERPs and web platforms that teams rely on every day, and I now write Solana smart contracts in Rust with Anchor.</p>
+      <a class="pill btn" href="#projects">View my work &nearr;</a>
     </div>
-
+    <div class="portrait">
+      <span class="ph" aria-hidden="true">SR</span>
+      <img src="photo.jpg" alt="Portrait of Sagar Shourov Roy" onerror="this.style.display='none'" style="position:absolute;inset:0">
+    </div>
   </div>
+</section>
 
-  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-  <script src="js/common.js"></script>
-  <script src="js/main.js"></script>
+<div class="stats"><div class="wrap">
+  <div class="stat"><b>10+</b><span>Years of experience</span></div>
+  <div class="stat"><b>2010</b><span>Freelancing since</span></div>
+  <div class="stat"><b>2025</b><span>Industry award</span></div>
+  <div class="stat"><b>US hrs</b><span>Remote availability</span></div>
+</div></div>
 
+<div class="mq"><div class="wrap">
+  <span class="pill"><i class="dot"></i>Core tech</span>
+  <div class="track" aria-hidden="true"><div id="mq"></div></div>
+</div></div>
+
+<section id="about"><div class="wrap">
+  <div class="sh"><span class="pill"><i class="dot"></i>About me</span><h2>Engineer. Founder. Builder.</h2></div>
+  <div class="about">
+    <div>
+      <p>I started freelancing in 2010 and have spent the years since delivering production web applications for clients around the world. I have led engineering teams, run a software company, and built the internal platforms that visa and immigration teams use daily.</p>
+      <p>Right now I am deepening my work in blockchain, building on Solana with Anchor and Rust, and I am looking for full-stack roles where smart contract experience counts.</p>
+    </div>
+    <div class="card"><h3>Education &amp; recognition</h3>
+      <p style="margin-top:10px">MSc in Computer Science and Engineering, Khulna University<br>BSc in Computer Science and Engineering, Bangladesh University</p>
+      <p style="margin-top:14px;color:var(--txt)">Best ERP Software Development Specialist 2025, South Asia. Technology Innovator Awards, Corporate Vision Magazine.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <div class="sh"><span class="pill"><i class="dot"></i>Selected work</span><h2>Projects</h2></div>
+  <div class="proj">
+    <div class="stage" id="stage" aria-hidden="true">
+      <div class="pc g0"><em>PRODUCTION</em><h4>OneKey CRM</h4><small>Case management platform</small></div>
+      <div class="pc g1"><em>ON-CHAIN</em><h4>Solana Counter dApp</h4><small>Anchor program + client</small></div>
+      <div class="pc g2"><em>IN PROGRESS</em><h4>TaskPilot</h4><small>Local-first desktop agent</small></div>
+    </div>
+    <div class="info" aria-live="polite">
+      <div class="pager"><span id="cnt"></span><div class="nums" id="nums"></div></div>
+      <small id="pk"></small><h3 id="pt"></h3><p id="pd"></p><div class="tags" id="pg"></div>
+      <div class="arrows"><button id="prev" aria-label="Previous project">&uarr;</button><button id="next" aria-label="Next project">&darr;</button></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="sh"><span class="pill"><i class="dot"></i>System capabilities</span><h2>Skills &amp; Architecture</h2></div>
+  <div class="map">
+    <div class="col">
+      <div class="grp" style="--c:var(--violet)"><h3>Frontend</h3><p>React &middot; Redux Toolkit<br>TypeScript &middot; Tailwind CSS<br>HTML email templates</p></div>
+      <div class="grp" style="--c:var(--red2)"><h3>Backend &amp; APIs</h3><p>Node.js &middot; Express<br>PHP &middot; Laravel<br>Python &middot; Java</p></div>
+    </div>
+    <div class="core"><div><b>10+</b><span>years building</span></div></div>
+    <div class="col">
+      <div class="grp" style="--c:var(--cyan)"><h3>Blockchain</h3><p>Solana &middot; Anchor<br>Rust &middot; Smart contracts<br>Web3 clients</p></div>
+      <div class="grp" style="--c:#fbbf24"><h3>Data &amp; infra</h3><p>PostgreSQL &middot; MySQL<br>Redis &middot; REST APIs<br>CRM &amp; ERP systems</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <div class="sh"><span class="pill"><i class="dot"></i>Career</span><h2>Experience</h2></div>
+  <ol class="tl">
+    <li><small>Nov 2022 &ndash; Present</small><h3>Principal Engineer, One Key Visa Inc.</h3><p>Lead engineering and built OneKey CRM with React and Laravel.</p></li>
+    <li><small>2019 &ndash; 2022</small><h3>Managing Director, Beta Source Software Limited</h3><p>Ran the company and its delivery of custom software for clients.</p></li>
+    <li><small>2010 &ndash; Present</small><h3>Freelance Full-Stack Developer</h3><p>Web applications, ERP systems and HTML email templates for clients worldwide.</p></li>
+  </ol>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <div class="sh" style="margin-bottom:30px"><span class="pill"><i class="dot"></i>Contact</span><h2>Let's build something</h2><p>Open to full-stack roles with smart contract work, and to remote teams on US business hours.</p></div>
+  <div class="row">
+    <a class="pill btn" style="margin:0" href="mailto:you@example.com">Email me</a>
+    <a class="pill btn" style="margin:0" href="https://github.com/sagarshourov" target="_blank" rel="noopener">GitHub &nearr;</a>
+  </div>
+</div></section>
+</main>
+<footer>&copy; 2026 SAGAR SHOUROV ROY</footer>
+
+<script>
+(function(){
+  // marquee
+  var tech=["React","Redux Toolkit","TypeScript","Node.js & Express","Laravel","PostgreSQL","Redis","Tailwind CSS","Solana","Anchor Framework","Rust","Smart Contracts"];
+  var m=document.getElementById('mq');
+  m.innerHTML=tech.concat(tech).map(function(t){return '<span>'+t+'</span>'}).join('');
+
+  // projects
+  var P=[
+    {k:"Production CRM platform",t:"OneKey CRM",d:"A customer and case management platform for One Key Visa that keeps clients, applications and team workflows in one place.",g:["React","Laravel","MySQL","Redis"]},
+    {k:"On-chain program",t:"Solana Counter dApp",d:"My first Solana program: a counter contract with a web client, built to learn accounts, instructions and testing with Anchor.",g:["Rust","Anchor","TypeScript"]},
+    {k:"Local-first desktop AI agent",t:"TaskPilot",d:"A desktop agent that runs models on your own machine and acts on your behalf, so your data stays with you.",g:["Electron","llama.cpp","UI-TARS"]}
+  ];
+  var cards=[].slice.call(document.querySelectorAll('.pc')),i=0,nums=document.getElementById('nums');
+  P.forEach(function(_,n){var b=document.createElement('button');b.textContent='0'+(n+1);b.onclick=function(){go(n)};nums.appendChild(b)});
+  function go(n){
+    i=(n+P.length)%P.length;
+    cards.forEach(function(c,k){
+      var o=k-i; if(o>1)o-=P.length; if(o<-1)o+=P.length;
+      c.style.transform='translateX('+o*62+'%) translateZ('+(o===0?60:-120)+'px) rotateY('+(-o*32)+'deg)';
+      c.style.opacity=o===0?1:.45; c.style.zIndex=o===0?3:1;
+    });
+    var p=P[i];
+    document.getElementById('cnt').textContent='Projects \u2022 0'+(i+1)+' of 0'+P.length;
+    document.getElementById('pk').textContent=p.k;
+    document.getElementById('pt').textContent=p.t;
+    document.getElementById('pd').textContent=p.d;
+    document.getElementById('pg').innerHTML=p.g.map(function(g){return '<span>'+g+'</span>'}).join('');
+    [].forEach.call(nums.children,function(b,k){b.setAttribute('aria-current',k===i)});
+  }
+  document.getElementById('prev').onclick=function(){go(i-1)};
+  document.getElementById('next').onclick=function(){go(i+1)};
+  go(0);
+
+  // nav highlight
+  var links=[].slice.call(document.querySelectorAll('.links a'));
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}
+  })},{rootMargin:'-45% 0px -50% 0px'});
+  document.querySelectorAll('main section').forEach(function(s){io.observe(s)});
+
+  // hero fx: drifting red network, steered by the mouse
+  var c=document.getElementById('fx'),x=c.getContext('2d'),W,H,pts=[],mx=.5,my=.5;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size(){W=c.width=c.clientWidth;H=c.height=c.clientHeight;pts=[];for(var n=0;n<Math.min(70,W/18);n++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3})}
+  addEventListener('resize',size);size();
+  addEventListener('pointermove',function(e){mx=e.clientX/innerWidth;my=e.clientY/innerHeight});
+  function draw(){
+    x.clearRect(0,0,W,H);
+    pts.forEach(function(p){if(!reduce){p.x+=p.vx+(mx-.5)*.3;p.y+=p.vy+(my-.5)*.3}
+      if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0});
+    for(var a=0;a<pts.length;a++){
+      x.fillStyle='rgba(255,90,102,.8)';x.fillRect(pts[a].x,pts[a].y,2,2);
+      for(var b=a+1;b<pts.length;b++){
+        var dx=pts[a].x-pts[b].x,dy=pts[a].y-pts[b].y,d=dx*dx+dy*dy;
+        if(d<12000){x.strokeStyle='rgba(225,29,46,'+(.35*(1-d/12000))+')';x.beginPath();x.moveTo(pts[a].x,pts[a].y);x.lineTo(pts[b].x,pts[b].y);x.stroke()}
+      }
+    }
+    if(!reduce)requestAnimationFrame(draw);
+  }
+  draw();
+
+  // role typewriter
+  var roles=["Full-stack developer","Smart contract engineer","Principal engineer"],ri=0,el=document.getElementById('role');
+  if(!reduce)setInterval(function(){ri=(ri+1)%roles.length;el.textContent=roles[ri]},3200);
+})();
+</script>
 </body>
 </html>
